@@ -1,0 +1,66 @@
+Exercício 15 - Academia
+
+1-Variaveis necessárias
+
+nome - Nome do aluno
+idade - Idade do aluno
+
+2-Dados adequados
+
+String/texto - O nome é uma sequência de letras
+int/inteiro - A idade é um valor inteiro
+
+3-Pseudocodigo
+
+Var
+nome : texto
+idade : inteiro
+
+Início
+Escreva("Digite o nome do aluno: ")
+Leia(nome)
+
+Escreva("Digite a idade do aluno: ")
+Leia(idade)
+
+Se idade >= 16 Então
+Escreva("Matrícula permitida para ", nome)
+Senão
+Escreva("Matrícula não permitida para ", nome)
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class Academia {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+String nome;
+int idade;
+
+System.out.print("Digite o nome do aluno: ");
+nome = leia.nextLine();
+
+System.out.print("Digite a idade do aluno: ");
+idade = leia.nextInt();
+
+if (idade >= 16) {
+System.out.println("Matrícula permitida para " + nome);
+}
+else {
+System.out.println("Matrícula não permitida para " + nome);
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Nome: Lucas,   Idade: 18 - Matrícula permitida para Lucas
+Nome: Mariana, Idade: 16 - Matrícula permitida para Mariana
+Nome: Pedro,   Idade: 15 - Matrícula não permitida para Pedro
+Nome: Beatriz, Idade: 20 - Matrícula permitida para Beatriz
+Nome: João,    Idade: 12 - Matrícula não permitida para João

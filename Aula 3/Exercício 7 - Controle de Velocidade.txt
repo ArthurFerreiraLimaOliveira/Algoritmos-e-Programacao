@@ -1,0 +1,56 @@
+Exercício 7 - Controle de Velocidade
+
+1-Variaveis necessárias
+
+velocidade - Velocidade do veículo em km/h
+
+2-Dados adequados
+
+double/real - A velocidade pode conter casas decimais
+
+3-Pseudocodigo
+
+Var
+velocidade : real
+
+Início
+Escreva("Digite a velocidade do veículo (km/h): ")
+Leia(velocidade)
+
+Se (velocidade > 60) Então
+Escreva("Acima da velocidade permitida")
+Senão
+Escreva("Velocidade dentro do limite")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class ControleVelocidade {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+double velocidade;
+
+System.out.print("Digite a velocidade do veículo (km/h): ");
+velocidade = leia.nextDouble();
+
+if (velocidade > 60.0) {
+System.out.println("Acima da velocidade permitida");
+}
+else {
+System.out.println("Velocidade dentro do limite");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Velocidade: 50.0 - Resultado: Velocidade dentro do limite
+Velocidade: 60.0 - Resultado: Velocidade dentro do limite
+Velocidade: 60.1 - Resultado: Acima da velocidade permitida
+Velocidade: 80.0 - Resultado: Acima da velocidade permitida
+Velocidade: 35.5 - Resultado: Velocidade dentro do limite

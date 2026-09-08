@@ -1,0 +1,72 @@
+Exercício 8 - Média Escolar
+
+1-Variaveis necessárias
+
+nota1 - Primeira nota
+nota2 - Segunda nota
+media - Média aritmética das duas notas
+
+2-Dados adequados
+
+double/real - As notas e a média podem possuir casas decimais
+
+3-Pseudocodigo
+
+Var
+nota1, nota2, media : real
+
+Início
+Escreva("Digite a primeira nota: ")
+Leia(nota1)
+
+Escreva("Digite a segunda nota: ")
+Leia(nota2)
+
+media <- (nota1 + nota2) / 2
+
+Escreva("Média: ", media)
+
+Se (media >= 60) Então
+Escreva("Aprovado")
+Senão
+Escreva("Reprovado")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class MediaEscolar {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+double nota1, nota2, media;
+
+System.out.print("Digite a primeira nota: ");
+nota1 = leia.nextDouble();
+
+System.out.print("Digite a segunda nota: ");
+nota2 = leia.nextDouble();
+
+media = (nota1 + nota2) / 2.0;
+
+System.out.println("Média: " + media);
+
+if (media >= 60.0) {
+System.out.println("Aprovado");
+}
+else {
+System.out.println("Reprovado");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Nota 1: 70.0,  Nota 2: 80.0 - Média: 75.0 | Resultado: Aprovado
+Nota 1: 60.0,  Nota 2: 60.0 - Média: 60.0 | Resultado: Aprovado
+Nota 1: 50.0,  Nota 2: 65.0 - Média: 57.5 | Resultado: Reprovado
+Nota 1: 40.0,  Nota 2: 30.0 - Média: 35.0 | Resultado: Reprovado
+Nota 1: 100.0, Nota 2: 20.0 - Média: 60.0 | Resultado: Aprovado

@@ -1,0 +1,58 @@
+Exercício 5 - Verificação de Senha
+
+1-Variaveis necessárias
+
+senhaPadrao - Senha correta
+senhaDigitada - Senha fornecida pelo usuário
+
+2-Dados adequados
+
+String/texto - A senha pode conter numeros ou letras 
+
+3-Pseudocodigo
+
+Var
+Const SENHA_PADRAO : texto <- "1234"
+senhaDigitada : texto
+
+Início
+Escreva("Digite a senha: ")
+Leia(senhaDigitada)
+
+Se (senhaDigitada = SENHA_PADRAO) Então
+Escreva("Acesso permitido")
+Senão
+Escreva("Acesso negado")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class VerificacaoSenha {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+final String SENHA_PADRAO = "1234";
+String senhaDigitada;
+
+System.out.print("Digite a senha: ");
+senhaDigitada = leia.nextLine();
+
+if (senhaDigitada.equals(SENHA_PADRAO)) {
+System.out.println("Acesso permitido");
+} else {
+System.out.println("Acesso negado");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Senha digitada: "1234"  - Resultado: Acesso permitido
+Senha digitada: "0000"  - Resultado: Acesso negado
+Senha digitada: "123"   - Resultado: Acesso negado
+Senha digitada: "admin" - Resultado: Acesso negado
+Senha digitada: "12345" - Resultado: Acesso negado

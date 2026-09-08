@@ -1,0 +1,71 @@
+Exercício 13 - Controle de Presença
+
+1-Variaveis necessárias
+
+aulas - Quantidade de aulas
+faltas - Quantidade de faltas do aluno
+frequencia - Percentual de frequência do aluno
+
+2-Dados adequados
+
+int/inteiro - A quantidade de aulas e de faltas são valores inteiros
+double/real - O percentual de frequência pode conter casas decimais
+
+3-Pseudocodigo
+
+Var
+aulas, faltas : inteiro
+frequencia : real
+
+Início
+Escreva("Digite a quantidade de aulas: ")
+Leia(aulas)
+
+Escreva("Digite a quantidade de faltas: ")
+Leia(faltas)
+
+frequencia <- ((aulas - faltas) * 100) / aulas
+
+Se frequencia >= 75 Então
+Escreva("Frequência suficiente")
+Senão
+Escreva("Frequência insuficiente")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class ControlePresenca {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+int aulas, faltas;
+double frequencia;
+
+System.out.print("Digite a quantidade de aulas: ");
+aulas = leia.nextInt();
+
+System.out.print("Digite a quantidade de faltas: ");
+faltas = leia.nextInt();
+
+frequencia = ((double)(aulas - faltas) * 100) / aulas;
+
+if (frequencia >= 75) {
+System.out.println("Frequência suficiente");
+}
+else {
+System.out.println("Frequência insuficiente");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Aulas: 100, Faltas: 20 (Frequência: 80.0%) - Frequência suficiente
+Aulas: 100, Faltas: 25 (Frequência: 75.0%) - Frequência suficiente
+Aulas: 100, Faltas: 30 (Frequência: 70.0%) - Frequência insuficiente
+Aulas: 40,  Faltas: 5  (Frequência: 87.5%) - Frequência suficiente
+Aulas: 80,  Faltas: 22 (Frequência: 72.5%) - Frequência insuficiente

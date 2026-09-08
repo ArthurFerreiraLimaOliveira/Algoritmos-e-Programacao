@@ -1,0 +1,56 @@
+Exercício 1 - Controle de Temperatura
+
+1-Variaveis necessárias
+
+temp - Temperatura
+
+2-Dados adequados
+
+double/real - Temperaturas tem casas decimais
+
+3-Pseudocodigo
+
+Var
+temperatura : real
+
+Início
+Escreva("Digite a temperatura atual: ")
+Leia(temperatura)
+
+Se temperatura >= 28 Então
+Escreva("Ligando o ar condicionado")
+Senão
+Escreva("Temperatura agradável.")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class ControleTemperatura {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+double temperatura;
+
+System.out.print("Informe a temperatura: ");
+temp = leia.nextDouble();
+
+if (temperatura >= 28) {
+System.out.println("Ligar ar-condicionado");
+}
+else {
+System.out.println("Temperatura agradável");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+31.0 - Ligar ar-condicionado
+28.0 - Ligar ar-condicionado
+27.9 - Ar-condicionado vai continuar desligado
+17.5 - Ar-condicionado vai continuar desligado
+40.2 - Ligar ar-condicionado

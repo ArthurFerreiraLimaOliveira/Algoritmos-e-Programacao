@@ -1,0 +1,87 @@
+Desafio Extra
+
+1-Variaveis necessárias
+
+Cliente - Nome do cliente
+horas - Quantidade de horas de uso da bicicleta
+valorTotal - Valor total do aluguel
+VALOR_HORA - Valor cobrado por hora de uso (8.00)
+
+2-Dados adequados
+
+String/texto - O nome do cliente é uma sequência de letras
+int/inteiro - As horas utilizadas são representadas por um valor inteiro
+double/real - O valor total e o valor por hora possuem casas decimais
+
+3-Pseudocodigo
+
+Var
+Cliente : texto
+horas : inteiro
+valorTotal : real
+VALOR_HORA : real
+
+Início
+VALOR_HORA <- 8.00
+
+Escreva("Digite o nome do cliente: ")
+Leia(Cliente)
+
+Escreva("Digite a quantidade de horas utilizadas: ")
+Leia(horas)
+
+valorTotal <- horasUtilizadas * VALOR_HORA
+
+Escreva("Cliente: ", Cliente)
+Escreva("Horas utilizadas: ", horas)
+Escreva("Valor total: R$ ", valorTotal)
+
+Se valorTotal > 50 Então
+Escreva("Categoria: Cliente Premium")
+Senão
+Escreva("Categoria: Cliente Comum")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class AluguelBicicletas {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+final double VALOR_HORA = 8.00;
+String Cliente;
+int horas;
+double valorTotal;
+
+System.out.print("Digite o nome do cliente: ");
+Cliente = leia.nextLine();
+
+System.out.print("Digite a quantidade de horas utilizadas: ");
+horas = leia.nextInt();
+
+valorTotal = horas * VALOR_HORA;
+
+System.out.println("Cliente: " + Cliente);
+System.out.println("Horas utilizadas: " + horas);
+System.out.printf("Valor total: R$ %.2f\n", valorTotal);
+
+if (valorTotal > 50) {
+System.out.println("Categoria: Cliente Premium");
+}
+else {
+System.out.println("Categoria: Cliente Comum");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Nome: Carlos,   Horas: 3  (Total: R$ 24.00) - Categoria: Cliente Comum
+Nome: Ana,      Horas: 7  (Total: R$ 56.00) - Categoria: Cliente Premium
+Nome: Bruno,    Horas: 6  (Total: R$ 48.00) - Categoria: Cliente Comum
+Nome: Fernanda, Horas: 10 (Total: R$ 80.00) - Categoria: Cliente Premium
+Nome: Rafael,   Horas: 1  (Total: R$ 8.00)  - Categoria: Cliente Comum

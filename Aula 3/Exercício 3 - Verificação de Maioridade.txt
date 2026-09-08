@@ -1,0 +1,65 @@
+Exercício 3 - Verificação de Maioridade
+
+1-Variaveis necessárias
+
+nome - Nome da pessoa
+idade - Idade da pessoa
+
+2-Dados adequados
+
+String/texto - O nome é um texto
+int/inteiro - A idade é um número inteiro
+
+3-Pseudocodigo
+
+Var
+nome : texto
+idade : inteiro
+
+Início
+Escreva("Digite o seu nome: ")
+Leia(nome)
+Escreva("Digite a sua idade: ")
+Leia(idade)
+
+Se idade >= 18 Então
+Escreva("Participação autorizada")
+Senão
+Escreva("Necessária autorização dos responsáveis")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class VerificacaoMaioridade {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+String nome;
+int idade;
+
+System.out.print("Digite o seu nome: ");
+nome = leia.nextLine();
+
+System.out.print("Digite a sua idade: ");
+idade = leia.nextInt();
+
+if (idade >= 18) {
+System.out.println("Participação autorizada");
+}
+else {
+System.out.println("Necessária autorização dos responsáveis");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Nome: "Lucas", Idade: 20 - Participação autorizada
+Nome: "Ana", Idade: 18 - Participação autorizada
+Nome: "Mariana", Idade: 17 - Necessária autorização dos responsáveis
+Nome: "Pedro", Idade: 12 - Necessária autorização dos responsáveis
+Nome: "Carlos", Idade: 45 - Participação autorizada

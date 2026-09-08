@@ -1,0 +1,74 @@
+Exercício 4 - Calculadora de Consumo de Combustível
+
+1-Variaveis necessárias
+
+distancia - Distância percorrida em quilômetros
+consumo - Consumo médio do veículo km/l
+precoCombustivel - Preço por litro do combustível
+litrosGastos - Quantidade total de litros gastos na viagem
+custoTotal - Custo total do combustível para a viagem
+
+2-Dados adequados
+
+double/real - Todos os valores podem possuir casas decimais
+
+3-Pseudocodigo
+
+Var
+distancia, consumo, precoCombustivel, litrosGastos, custoTotal : real
+
+Início
+Escreva("Digite a distância percorrida (km): ")
+Leia(distancia)
+
+Escreva("Digite o consumo do carro (km/l): ")
+Leia(consumo)
+
+Escreva("Digite o preço do combustível: ")
+Leia(precoCombustivel)
+
+litrosGastos <- distancia / consumo
+custoTotal <- litrosGastos * precoCombustivel
+
+Escreva("Litros gastos: ", litrosGastos)
+Escreva("Custo total: R$ ", custoTotal)
+
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class ConsumoCombustivel {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+double distancia, consumo, precoCombustivel;
+double litrosGastos, custoTotal;
+
+System.out.print("Digite a distância percorrida (km): ");
+distancia = leia.nextDouble();
+
+System.out.print("Digite o consumo do carro (km/l): ");
+consumo = leia.nextDouble();
+
+System.out.print("Digite o preço do combustível: ");
+precoCombustivel = leia.nextDouble();
+
+litrosGastos = distancia / consumo;
+custoTotal = litrosGastos * precoCombustivel;
+
+System.out.println("Litros gastos: " + litrosGastos);
+System.out.println("Custo total: R$ " + custoTotal);
+}
+}
+
+5-Testes com diferentes valores
+
+Distância: 100.0, Consumo: 10.0, Preço: 5.00 - Litros gastos: 10.0  | Custo total: R$ 50.0
+Distância: 250.0, Consumo: 12.5, Preço: 5.80 - Litros gastos: 20.0  | Custo total: R$ 116.0
+Distância: 50.0,  Consumo: 8.0,  Preço: 6.00 - Litros gastos: 6.25  | Custo total: R$ 37.5
+Distância: 300.0, Consumo: 15.0, Preço: 4.90 - Litros gastos: 20.0  | Custo total: R$ 98.0
+Distância: 180.5, Consumo: 10.0, Preço: 5.50 - Litros gastos: 18.05 | Custo total: R$ 99.275

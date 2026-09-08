@@ -1,0 +1,64 @@
+Exercício 6 - Desconto na Loja
+
+1-Variaveis necessárias
+
+valorCompra - Valor da compra
+desconto - Valor do desconto calculado
+valorFinal - Valor a ser pago após aplicar ou não o desconto
+
+2-Dados adequados
+
+double/real - Os valores possuem casas decimais
+
+3-Pseudocodigo
+
+Var
+valorCompra, desconto, valorFinal : real
+
+Início
+Escreva("Digite o valor da compra: R$ ")
+Leia(valorCompra)
+
+Se (valorCompra > 200) Então
+desconto <- valorCompra * 0.10
+valorFinal <- valorCompra - desconto
+Senão
+valorFinal <- valorCompra
+FimSe
+
+Escreva("Valor final da compra: R$ ", valorFinal)
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class DescontoLoja {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+double valorCompra, desconto, valorFinal;
+
+System.out.print("Digite o valor da compra: R$ ");
+valorCompra = leia.nextDouble();
+
+if (valorCompra > 200.0) {
+desconto = valorCompra * 0.10;
+valorFinal = valorCompra - desconto;
+} else {
+valorFinal = valorCompra;
+}
+
+System.out.println("Valor final da compra: R$ " + valorFinal);
+}
+}
+
+5-Testes com diferentes valores
+
+Valor da compra: R$ 250.00 - Desconto: 10% (R$ 25.00) | Valor final: R$ 225.00
+Valor da compra: R$ 200.00 - Desconto: 0%  (R$ 0.00)  | Valor final: R$ 200.00
+Valor da compra: R$ 150.00 - Desconto: 0%  (R$ 0.00)  | Valor final: R$ 150.00
+Valor da compra: R$ 500.00 - Desconto: 10% (R$ 50.00) | Valor final: R$ 450.00
+Valor da compra: R$ 200.01 - Desconto: 10% (R$ 20.001)| Valor final: R$ 180.009

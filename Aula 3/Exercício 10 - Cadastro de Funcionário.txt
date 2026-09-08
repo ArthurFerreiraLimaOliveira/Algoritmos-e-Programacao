@@ -1,0 +1,70 @@
+Exercício 10 - Cadastro de Funcionário
+
+1-Variaveis necessárias
+
+nome - Nome do funcionário
+salario - Salário bruto do funcionário
+
+2-Dados adequados
+
+String/texto - Para o nome do funcionário
+double/real - O salário pode conter casas decimais
+
+3-Pseudocodigo
+
+Var
+nome : texto
+salario : real
+
+Início
+Escreva("Digite o nome do funcionário: ")
+Leia(nome)
+
+Escreva("Digite o salário: R$ ")
+Leia(salario)
+
+Escreva("Funcionário: ", nome)
+
+Se (salario >= 3000) Então
+Escreva("Faixa salarial Alta")
+Senão
+Escreva("Faixa salarial Básica")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class CadastroFuncionario {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+String nome;
+double salario;
+
+System.out.print("Digite o nome do funcionário: ");
+nome = leia.nextLine();
+
+System.out.print("Digite o salário: R$ ");
+salario = leia.nextDouble();
+
+System.out.println("Funcionário: " + nome);
+
+if (salario >= 3000.0) {
+System.out.println("Faixa salarial Alta");
+}
+else {
+System.out.println("Faixa salarial Básica");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Nome: "Ana",     Salário: R$ 3500.00 - Resultado: Faixa salarial Alta
+Nome: "Carlos",  Salário: R$ 3000.00 - Resultado: Faixa salarial Alta
+Nome: "Maria",   Salário: R$ 2999.99 - Resultado: Faixa salarial Básica
+Nome: "João",    Salário: R$ 1800.00 - Resultado: Faixa salarial Básica
+Nome: "Beatriz", Salário: R$ 5000.00 - Resultado: Faixa salarial Alta

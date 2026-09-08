@@ -1,0 +1,55 @@
+Exercício 11 - Controle de Estoque
+
+1-Variaveis necessárias
+
+quantidade - Quantidade do produto em estoque
+
+2-Dados adequados
+
+int/inteiro - A quantidade de itens em estoque é um número inteiro
+
+3-Pseudocodigo
+
+Var
+quantidade : inteiro
+
+Início
+Escreva("Digite a quantidade atual em estoque: ")
+Leia(quantidade)
+
+Se (quantidade < 10) Então
+Escreva("Reposição necessária")
+Senão
+Escreva("Estoque adequado")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class ControleEstoque {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+int quantidade;
+
+System.out.print("Digite a quantidade atual em estoque: ");
+quantidade = leia.nextInt();
+
+if (quantidadeAtual < 10) {
+System.out.println("Reposição necessária");
+} else {
+System.out.println("Estoque adequado");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Quantidade atual: 5  - Resultado: Reposição necessária
+Quantidade atual: 9  - Resultado: Reposição necessária
+Quantidade atual: 10 - Resultado: Estoque adequado
+Quantidade atual: 15 - Resultado: Estoque adequado
+Quantidade atual: 0  - Resultado: Reposição necessária

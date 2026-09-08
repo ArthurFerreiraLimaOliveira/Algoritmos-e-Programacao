@@ -1,0 +1,71 @@
+Exercício 2 - Compra no Supermercado
+
+1-Variaveis necessárias
+
+qtdProdutos - Quantidade de produtos
+valorUnitario - Valor unitário de cada produto
+valorTotal - Valor total da compra
+
+2-Dados adequados
+
+int/inteiro - A quantidade de produtos é um valor inteiro
+double/real - O valor unitário e o valor total podem conter casas decimais
+
+3-Pseudocodigo
+
+Var
+qtdProdutos : inteiro
+valorUnitario, valorTotal : real
+
+Início
+Escreva("Digite a quantidade de produtos: ")
+Leia(qtdProdutos)
+
+Escreva("Digite o valor unitário do produto: ")
+Leia(valorUnitario)
+
+valorTotal <- qtdProdutos * valorUnitario
+
+Se valorTotal > 100 Então
+Escreva("Você ganhou frete grátis")
+Senão
+Escreva("Frete não disponível")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class CompraSupermercado {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+int qtdProdutos;
+double valorUnitario, valorTotal;
+
+System.out.print("Digite a quantidade de produtos: ");
+qtdProdutos = leia.nextInt();
+
+System.out.print("Digite o valor unitário do produto: ");
+valorUnitario = leia.nextDouble();
+
+valorTotal = qtdProdutos * valorUnitario;
+
+if (valorTotal > 100) {
+System.out.println("Você ganhou frete grátis");
+}
+else {
+System.out.println("Frete não disponível");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Qtd: 2, Valor: 60.0 (Total: R$ 120.0) - Você ganhou frete grátis
+Qtd: 5, Valor: 20.0 (Total: R$ 100.0) - Frete não disponível
+Qtd: 1, Valor: 100.5 (Total: R$ 100.5) - Você ganhou frete grátis
+Qtd: 3, Valor: 15.0 (Total: R$ 45.0) - Frete não disponível
+Qtd: 10, Valor: 10.1 (Total: R$ 101.0) - Você ganhou frete grátis

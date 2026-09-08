@@ -1,0 +1,72 @@
+Exercício 9 - Conta de Energia
+
+1-Variaveis necessárias
+
+consumo - Consumo de energia no mês kWh
+valor - Valor cobrado por cada kWh
+contaTotal - Valor total a ser pago na conta de energia
+
+2-Dados adequados
+
+double/real - Todos os valores podem conter casas decimais
+
+3-Pseudocodigo
+
+Var
+consumo, valor, contaTotal : real
+
+Início
+Escreva("Digite o consumo em kWh: ")
+Leia(consumo)
+
+Escreva("Digite o valor do kWh: R$ ")
+Leia(valor)
+
+contaTotal <- consumo * valor
+
+Escreva("Valor da conta: R$ ", contaTotal)
+
+Se (contaTotal > 300) Então
+Escreva("Consumo elevado")
+Senão
+Escreva("Consumo dentro do esperado")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class ContaEnergia {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+double consumo, valor, contaTotal;
+
+System.out.print("Digite o consumo em kWh: ");
+consumo = leia.nextDouble();
+
+System.out.print("Digite o valor do kWh: R$ ");
+valor = leia.nextDouble();
+
+contaTotal = consumo * valor;
+
+System.out.println("Valor da conta: R$ " + contaTotal);
+
+if (contaTotal > 300.0) {
+System.out.println("Consumo elevado");
+}
+else {
+System.out.println("Consumo dentro do esperado");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Consumo: 200.0 kWh, Valor kWh: R$ 0.80 - Conta: R$ 160.0 | Resultado: Consumo dentro do esperado
+Consumo: 400.0 kWh, Valor kWh: R$ 0.85 - Conta: R$ 340.0 | Resultado: Consumo elevado
+Consumo: 300.0 kWh, Valor kWh: R$ 1.00 - Conta: R$ 300.0 | Resultado: Consumo dentro do esperado
+Consumo: 300.1 kWh, Valor kWh: R$ 1.00 - Conta: R$ 300.1 | Resultado: Consumo elevado
+Consumo: 150.0 kWh, Valor kWh: R$ 0.90 - Conta: R$ 135.0 | Resultado: Consumo dentro do esperado

@@ -1,0 +1,56 @@
+Exercício 12 - Internet Residencial
+
+1-Variaveis necessárias
+
+velocidade - Velocidade da internet Mbps
+
+2-Dados adequados
+
+double/real - A velocidade da internet pode conter casas decimais
+
+3-Pseudocodigo
+
+Var
+velocidade : real
+
+Início
+Escreva("Digite a velocidade da internet (Mbps): ")
+Leia(velocidade)
+
+Se (velocidade >= 100) Então
+Escreva("Plano adequado para streaming")
+Senão
+Escreva("Considere aumentar o plano")
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class InternetResidencial {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+double velocidade;
+
+System.out.print("Digite a velocidade da internet (Mbps): ");
+velocidade = leia.nextDouble();
+
+if (velocidade >= 100.0) {
+System.out.println("Plano adequado para streaming");
+}
+else {
+System.out.println("Considere aumentar o plano");
+}
+}
+}
+
+5-Testes com diferentes valores
+
+Velocidade: 100.0 Mbps - Resultado: Plano adequado para streaming
+Velocidade: 150.0 Mbps - Resultado: Plano adequado para streaming
+Velocidade: 99.9 Mbps  - Resultado: Considere aumentar o plano
+Velocidade: 50.0 Mbps  - Resultado: Considere aumentar o plano
+Velocidade: 300.0 Mbps - Resultado: Plano adequado para streaming

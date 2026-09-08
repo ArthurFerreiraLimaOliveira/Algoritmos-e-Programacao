@@ -1,0 +1,58 @@
+Exercício 14 - Conversão de Moeda
+
+1-Variaveis necessárias
+
+Reais - Valor disponível em reais
+Dolares - Valor equivalente em dólares
+COTACAO_DOLAR - Cotação fixa do dólar (5.40)
+
+2-Dados adequados
+
+double/real - O valor em reais, o valor em dólares e a cotação possuem casas decimais
+
+3-Pseudocodigo
+
+Var
+Reais, Dolares : real
+COTACAO_DOLAR : real
+
+Início
+COTACAO_DOLAR <- 5.40
+
+Escreva("Digite o valor em reais: ")
+Leia(Reais)
+
+Dolares <- Reais / COTACAO_DOLAR
+
+Escreva("Com R$ ", Reais, " você pode comprar US$ ", Dolares)
+
+Fim
+
+4-Java
+
+import java.util.Scanner;
+
+public class ConversaoMoeda {
+public static void main(String[] args) {
+
+Scanner leia = new Scanner(System.in);
+
+final double COTACAO_DOLAR = 5.40;
+double Reais, Dolares;
+
+System.out.print("Digite o valor em reais: ");
+Reais = leia.nextDouble();
+
+Dolares = Reais / COTACAO_DOLAR;
+
+System.out.printf("Com R$ %.2f você pode comprar US$ %.2f\n", Reais, Dolares);
+}
+}
+
+5-Testes com diferentes valores
+
+Reais: 5.40   (Dólares: US$ 1.00)
+Reais: 10.80  (Dólares: US$ 2.00)
+Reais: 100.00 (Dólares: US$ 18.52)
+Reais: 540.00 (Dólares: US$ 100.00)
+Reais: 50.00  (Dólares: US$ 9.26)
