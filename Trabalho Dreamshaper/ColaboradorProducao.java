@@ -25,8 +25,7 @@ public class ColaboradorProducao extends Colaborador {
     public void setValorPorPeca(double valorPorPeca) {
         this.valorPorPeca = valorPorPeca;
     }
-
-    /** Produtividade = quantidadePecas x valorPorPeca */
+    
     public double calcularProdutividade() {
         return quantidadePecas * valorPorPeca;
     }
