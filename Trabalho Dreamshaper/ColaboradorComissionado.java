@@ -26,7 +26,6 @@ public class ColaboradorComissionado extends Colaborador {
         this.percentualComissao = percentualComissao;
     }
 
-    /** Comissão = valorVendas x percentualComissao / 100 */
     public double calcularComissao() {
         return valorVendas * percentualComissao / 100;
     }
